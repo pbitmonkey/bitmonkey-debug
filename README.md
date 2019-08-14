@@ -3,7 +3,7 @@
 Bitmonkey Core integration/staging tree
 
 
-What is Bitmonkey? Bitmonkey is a clone of BitCoin ... Starting from Genesis = 0 ...
+What is Bitmonkey? Bitmonkey is a clone of BitCoin ... Starting from Genesis Time = 0 ...
 
 Bitmonkey is an experimental digital currency that enables instant payments to anyone, anywhere in the world. Bitmonkey uses peer-to-peer technology to operate with no central authority: managing transactions and issuing money are carried out collectively by the network. Bitmonkey Core is the name of open source software which enables the use of this currency.
 
