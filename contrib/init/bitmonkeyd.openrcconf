@@ -1,0 +1,33 @@
+# /etc/conf.d/bitmonkeyd: config file for /etc/init.d/bitmonkeyd
+
+# Config file location
+#BITMONKEYD_CONFIGFILE="/etc/bitmonkey/bitmonkey.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITMONKEYD_USER)
+#BITMONKEYD_PIDDIR="/var/run/bitmonkeyd"
+
+# What filename to give the pidfile
+#BITMONKEYD_PIDFILE="${BITMONKEYD_PIDDIR}/bitmonkeyd.pid"
+
+# Where to write bitmonkeyd data (be mindful that the blockchain is large)
+#BITMONKEYD_DATADIR="/var/lib/bitmonkeyd"
+
+# User and group to own bitmonkeyd process
+#BITMONKEYD_USER="bitmonkey"
+#BITMONKEYD_GROUP="bitmonkey"
+
+# Path to bitmonkeyd executable
+#BITMONKEYD_BIN="/usr/bin/bitmonkeyd"
+
+# Nice value to run bitmonkeyd under
+#BITMONKEYD_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+#BITMONKEYD_OPTS=""
+
+# The timeout in seconds OpenRC will wait for bitmonkeyd to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+BITMONKEYD_SIGTERM_TIMEOUT=60

@@ -1,0 +1,11 @@
+prefix=/usr/local
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: bitmonkey Core consensus library
+Description: Library for the bitmonkey consensus protocol.
+Version: 0.18.99
+Libs: -L${libdir} -lbitmonkeyconsensus
+Cflags: -I${includedir}
+Requires.private: libcrypto

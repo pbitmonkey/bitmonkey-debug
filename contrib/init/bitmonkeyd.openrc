@@ -1,0 +1,92 @@
+#!/sbin/openrc-run
+
+# backward compatibility for existing gentoo layout 
+#
+if [ -d "/var/lib/bitmonkey/.bitmonkey" ]; then
+	BITMONKEYD_DEFAULT_DATADIR="/var/lib/bitmonkey/.bitmonkey"
+else
+	BITMONKEYD_DEFAULT_DATADIR="/var/lib/bitmonkeyd"
+fi
+
+BITMONKEYD_CONFIGFILE=${BITMONKEYD_CONFIGFILE:-/etc/bitmonkey/bitmonkey.conf}
+BITMONKEYD_PIDDIR=${BITMONKEYD_PIDDIR:-/var/run/bitmonkeyd}
+BITMONKEYD_PIDFILE=${BITMONKEYD_PIDFILE:-${BITMONKEYD_PIDDIR}/bitmonkeyd.pid}
+BITMONKEYD_DATADIR=${BITMONKEYD_DATADIR:-${BITMONKEYD_DEFAULT_DATADIR}}
+BITMONKEYD_USER=${BITMONKEYD_USER:-${BITMONKEY_USER:-bitmonkey}}
+BITMONKEYD_GROUP=${BITMONKEYD_GROUP:-bitmonkey}
+BITMONKEYD_BIN=${BITMONKEYD_BIN:-/usr/bin/bitmonkeyd}
+BITMONKEYD_NICE=${BITMONKEYD_NICE:-${NICELEVEL:-0}}
+BITMONKEYD_OPTS="${BITMONKEYD_OPTS:-${BITMONKEY_OPTS}}"
+
+name="bitmonkey Core Daemon"
+description="bitmonkey cryptocurrency P2P network daemon"
+
+command="/usr/bin/bitmonkeyd"
+command_args="-pid=\"${BITMONKEYD_PIDFILE}\" \
+		-conf=\"${BITMONKEYD_CONFIGFILE}\" \
+		-datadir=\"${BITMONKEYD_DATADIR}\" \
+		-daemon \
+		${BITMONKEYD_OPTS}"
+
+required_files="${BITMONKEYD_CONFIGFILE}"
+start_stop_daemon_args="-u ${BITMONKEYD_USER} \
+			-N ${BITMONKEYD_NICE} -w 2000"
+pidfile="${BITMONKEYD_PIDFILE}"
+
+# The retry schedule to use when stopping the daemon. Could be either
+# a timeout in seconds or multiple signal/timeout pairs (like
+# "SIGKILL/180 SIGTERM/300")
+retry="${BITMONKEYD_SIGTERM_TIMEOUT}"
+
+depend() {
+	need localmount net
+}
+
+# verify
+# 1) that the datadir exists and is writable (or create it)
+# 2) that a directory for the pid exists and is writable
+# 3) ownership and permissions on the config file
+start_pre() {
+	checkpath \
+	-d \
+	--mode 0750 \
+	--owner "${BITMONKEYD_USER}:${BITMONKEYD_GROUP}" \
+	"${BITMONKEYD_DATADIR}"
+
+	checkpath \
+	-d \
+	--mode 0755 \
+	--owner "${BITMONKEYD_USER}:${BITMONKEYD_GROUP}" \
+	"${BITMONKEYD_PIDDIR}"
+
+	checkpath -f \
+	-o ${BITMONKEYD_USER}:${BITMONKEYD_GROUP} \
+	-m 0660 \
+	${BITMONKEYD_CONFIGFILE}
+
+	checkconfig || return 1
+}
+
+checkconfig()
+{
+	if ! grep -qs '^rpcpassword=' "${BITMONKEYD_CONFIGFILE}" ; then
+		eerror ""
+		eerror "ERROR: You must set a secure rpcpassword to run bitmonkeyd."
+		eerror "The setting must appear in ${BITMONKEYD_CONFIGFILE}"
+		eerror ""
+		eerror "This password is security critical to securing wallets "
+		eerror "and must not be the same as the rpcuser setting."
+		eerror "You can generate a suitable random password using the following "
+		eerror "command from the shell:"
+		eerror ""
+		eerror "bash -c 'tr -dc a-zA-Z0-9 < /dev/urandom | head -c32 && echo'"
+		eerror ""
+		eerror "It is recommended that you also set alertnotify so you are "
+		eerror "notified of problems:"
+		eerror ""
+		eerror "ie: alertnotify=echo %%s | mail -s \"bitmonkey Alert\"" \
+			"admin@foo.com"
+		eerror ""
+		return 1
+	fi
+}

@@ -1,0 +1,4 @@
+qt/libbitmonkeyqt_a-qrc_bitmonkey.o: qt/qrc_bitmonkey.cpp \
+ /usr/include/stdc-predef.h
+
+/usr/include/stdc-predef.h:
