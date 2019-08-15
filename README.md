@@ -10,6 +10,8 @@ pszTimestamp = "The Times 03/Jan/2009 Chancellor on brink of monkey bailout for 
 Not entering in any technical discussion if you wish to try an install Bitmonkey I would like to suggest to use Oracle VM VirtualBox
 you can donload it at ... https://www.virtualbox.org/wiki/Downloads after installing the last available version remember to install too "Oracle VM VirtualBox Extension Pack" https://download.virtualbox.org/virtualbox/6.0.10/Oracle_VM_VirtualBox_Extension_Pack-6.0.10.vbox-extpack .
 
+>>>> How to install Ubuntu on VirtualBox? https://askubuntu.com/questions/142549/how-to-install-ubuntu-on-virtualbox <<<<
+
 Once VB is installed download the ubuntu-16.04.6-desktop-amd64.iso http://it.releases.ubuntu.com/16.04/ubuntu-16.04.6-desktop-amd64.iso 
 and install it in VB.
 
