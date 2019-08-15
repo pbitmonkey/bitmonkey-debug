@@ -21,48 +21,47 @@ Before you start please be sure your Virtual Machine is update Open the terminal
 
 -------- List of depency you should have installed on your Virtual Machine to finally install Bitmonkey : the following ...
 
-sudo apt-get install git
-git clone https://github.com/pbitmonkey/bitmonkey-debug.git
-sudo apt-get install autoconf libtool pkg-config
-sudo apt-get install gawk
-sudo apt-get install g++ make
-sudo apt install libboost-all-dev
-sudo apt-get install bsdmainutils
-sudo apt-get install openssl libssl-dev
-sudo apt-get install build-essential autotools-dev
+$ sudo apt-get install git
+$ git clone https://github.com/pbitmonkey/bitmonkey-debug.git
+$ sudo apt-get install autoconf libtool pkg-config
+$ sudo apt-get install gawk
+$ sudo apt-get install g++ make
+$ sudo apt install libboost-all-dev
+$ sudo apt-get install bsdmainutils
+$ sudo apt-get install openssl libssl-dev
+$ sudo apt-get install build-essential autotools-dev
 
-note : Ubuntu 12.04 and later have packages for libdb5.1-dev and libdb5.1++-dev,
-but using these will break binary wallet compatibility, and is not recommended, so do it ...
+$ note : Ubuntu 12.04 and later have packages for libdb5.1-dev and libdb5.1++-dev,
+$ but using these will break binary wallet compatibility, and is not recommended, so do it ...
 
-sudo add-apt-repository ppa:bitcoin/bitcoin
-sudo apt-get update
-sudo apt-get install libdb4.8-dev libdb4.8++-dev
+$ sudo add-apt-repository ppa:bitcoin/bitcoin
+$ sudo apt-get update
+$ sudo apt-get install libdb4.8-dev libdb4.8++-dev
 
-sudo apt-get install libminiupnpc-dev
-sudo apt-get install libqt4-dev libprotobuf-dev protobuf-compiler
- sudo apt-get install libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools
-sudo apt-get install libqrencode-dev
-Once these are installed, they will be found by configure and a bitmonkey-qt executable will be
-built by default.
-sudo apt-get install autotools-dev automake python3
-sudo apt-get install libevent-dev libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-test-dev libboost-thread-dev
-sudo apt-get install libzmq3-dev
-sudo apt-get install libqrencode-dev
-sudo apt-get install doxygen
+$ sudo apt-get install libminiupnpc-dev
+$ sudo apt-get install libqt4-dev libprotobuf-dev protobuf-compiler
+$ sudo apt-get install libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools
+$ sudo apt-get install libqrencode-dev
+
+$ sudo apt-get install autotools-dev automake python3
+$ sudo apt-get install libevent-dev libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-test-dev libboost-thread-dev
+$ sudo apt-get install libzmq3-dev
+$ sudo apt-get install libqrencode-dev
+$ sudo apt-get install doxygen
 
 cd bitmonkey-debug
 serch for ... 
-../bitmonkey-debug/autogen.sh change permission to "autogen.sh" allow program esecution.
-../share/genbuild.sh change permission to "genbuild.sh" allow program esecution.
+$ ../bitmonkey-debug/autogen.sh change permission to "autogen.sh" allow program esecution.
+$ ../share/genbuild.sh change permission to "genbuild.sh" allow program esecution.
 
 --- Close all the windows and terminals open.
 
-Point bitmonkey-debug and open in terminal ... then type ...
-./autogen.sh ... wait it finish ... then type ..
-./configure --with-incompatible-bdb ... wait it finish ... then type ...
-make ... let it run it will take some time ...
-when it finish optional ... type 
-make install.
+$ Point bitmonkey-debug and open in terminal ... then type ...
+$ ./autogen.sh ... wait it finish ... then type ..
+$ ./configure --with-incompatible-bdb ... wait it finish ... then type ...
+$ make ... let it run it will take some time ...
+$ when it finish optional ... type 
+$ make install.
 
 Bitmonkey is an experimental digital currency that enables instant payments to anyone, anywhere in the world. Bitmonkey uses peer-to-peer technology to operate with no central authority: managing transactions and issuing money are carried out collectively by the network. Bitmonkey Core is the name of open source software which enables the use of this currency.
 
