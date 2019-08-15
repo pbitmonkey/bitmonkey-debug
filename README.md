@@ -19,7 +19,7 @@ Before you start please be sure your Virtual Machine is update Open the terminal
 
 -------- sudo apt-get update && sudo apt-get dist-upgrade && sudo apt-get autoremove --------
 
--------- List of depency you should have installed on your Virtual Machine to finally install Bitmonkey : the following ...
+-------- List of depency you should have installed on your Virtual Machine to finally install Bitmonkey : ...
 
 $ sudo apt-get install git
 
