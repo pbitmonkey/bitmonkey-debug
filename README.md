@@ -17,7 +17,7 @@ Now I Will list the requirement you need to install to download and install Bitm
 
 Before you start please be sure your Virtual Machine is update Open the terminal and run this comand ...
 
--------- sudo apt update && sudo apt dist-upgrade && sudo apt autoremove --------
+-------- sudo apt-get update && sudo apt-get dist-upgrade && sudo apt-get autoremove --------
 
 -------- List of depency you should have installed on your Virtual Machine to finally install Bitmonkey : the following ...
 
