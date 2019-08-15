@@ -21,8 +21,8 @@ Before you start please be sure your Virtual Machine is update Open the terminal
 
 -------- List of depency you should have installed on your Virtual Machine to finally install Bitmonkey : the following ...
 
-$ sudo apt-get install git
-$ git clone https://github.com/pbitmonkey/bitmonkey-debug.git
+--- sudo apt-get install git
+--- git clone https://github.com/pbitmonkey/bitmonkey-debug.git
 $ sudo apt-get install autoconf libtool pkg-config
 $ sudo apt-get install gawk
 $ sudo apt-get install g++ make
