@@ -7,6 +7,61 @@ What is Bitmonkey? Bitmonkey is a clone of BitCoin ... Starting from Genesis Tim
 
 pszTimestamp = "The Times 03/Jan/2009 Chancellor on brink of monkey bailout for banks"
 
+Not entering in any technical discussion if you wish to try an install Bitmonkey I would like to suggest to use Oracle VM VirtualBox
+you can donload it at ... https://www.virtualbox.org/wiki/Downloads after installing the last available version remember to install too "Oracle VM VirtualBox Extension Pack" https://download.virtualbox.org/virtualbox/6.0.10/Oracle_VM_VirtualBox_Extension_Pack-6.0.10.vbox-extpack .
+
+Once VB is installed download the ubuntu-16.04.6-desktop-amd64.iso http://it.releases.ubuntu.com/16.04/ubuntu-16.04.6-desktop-amd64.iso 
+and install it in VB.
+
+Now I Will list the requirement you need to install to download and install Bitmonkey on Ubuntu 16.04.6 starting from scratch up to the end.
+
+Before you start please be sure your Virtual Machine is update Open the terminal and run this comand ...
+
+-------- sudo apt update && sudo apt dist-upgrade && sudo apt autoremove --------
+-------- List of depency you shold have installed on your Virtual Machine to finally install Bitmonkey :
+sudo apt-get install git
+git clone https://github.com/pbitmonkey/bitmonkey-debug.git
+sudo apt-get install autoconf libtool pkg-config
+sudo apt-get install gawk
+sudo apt-get install g++ make
+sudo apt install libboost-all-dev
+sudo apt-get install bsdmainutils
+sudo apt-get install openssl libssl-dev
+sudo apt-get install build-essential autotools-dev
+
+note : Ubuntu 12.04 and later have packages for libdb5.1-dev and libdb5.1++-dev,
+but using these will break binary wallet compatibility, and is not recommended, so do it ...
+
+sudo add-apt-repository ppa:bitcoin/bitcoin
+sudo apt-get update
+sudo apt-get install libdb4.8-dev libdb4.8++-dev
+
+sudo apt-get install libminiupnpc-dev
+sudo apt-get install libqt4-dev libprotobuf-dev protobuf-compiler
+ sudo apt-get install libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools
+sudo apt-get install libqrencode-dev
+Once these are installed, they will be found by configure and a bitmonkey-qt executable will be
+built by default.
+sudo apt-get install autotools-dev automake python3
+sudo apt-get install libevent-dev libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-test-dev libboost-thread-dev
+sudo apt-get install libzmq3-dev
+sudo apt-get install libqrencode-dev
+sudo apt-get install doxygen
+
+cd bitmonkey-debug
+serch for ... 
+../bitmonkey-debug/autogen.sh change permission to "autogen.sh" allow program esecution.
+../share/genbuild.sh change permission to "genbuild.sh" allow program esecution.
+
+--- Close all the windows and terminals open.
+
+Point bitmonkey-debug and open in terminal ... then type ...
+./autogen.sh ... wait it finish ... then type ..
+./configure --with-incompatible-bdb ... wait it finish ... then type ...
+make ... let it run it will take some time ...
+when it finish optional ... type 
+make install.
+
 Bitmonkey is an experimental digital currency that enables instant payments to anyone, anywhere in the world. Bitmonkey uses peer-to-peer technology to operate with no central authority: managing transactions and issuing money are carried out collectively by the network. Bitmonkey Core is the name of open source software which enables the use of this currency.
 
 License
