@@ -19,7 +19,7 @@ and install it in VB.
 
 Now I Will list the requirement you need to install to download and install Bitmonkey on Ubuntu 16.04.6 starting from scratch up to the end.
 
-Before you start please be sure your Virtual Machine is update Open the terminal and run thess comands ...
+Before you start please be sure your Virtual Machine is update Open the terminal and run these commands ...
 
 -------- sudo apt-get update && sudo apt-get dist-upgrade && sudo apt-get autoremove --------
 
