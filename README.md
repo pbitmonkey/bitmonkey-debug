@@ -3,7 +3,9 @@
 Bitmonkey Core integration/staging tree
 
 
-What is Bitmonkey? Bitmonkey is a clone of BitCoin ... Starting from Genesis Time = 0 ... and 
+What is Bitmonkey? Bitmonkey is a clone of BitCoin ... Starting from Genesis Time = 0 
+
+... and 
 
 pszTimestamp = "The Times 03/Jan/2009 Chancellor on brink of monkey bailout for banks"
 
@@ -17,7 +19,7 @@ and install it in VB.
 
 Now I Will list the requirement you need to install to download and install Bitmonkey on Ubuntu 16.04.6 starting from scratch up to the end.
 
-Before you start please be sure your Virtual Machine is update Open the terminal and run this comand ...
+Before you start please be sure your Virtual Machine is update Open the terminal and run thess comands ...
 
 -------- sudo apt-get update && sudo apt-get dist-upgrade && sudo apt-get autoremove --------
 
