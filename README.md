@@ -8,7 +8,7 @@ What is Bitmonkey? Bitmonkey is a clone of BitCoin ... Starting from Genesis Tim
 pszTimestamp = "The Times 03/Jan/2009 Chancellor on brink of monkey bailout for banks"
 
 Not entering in any technical discussion if you wish to try and install Bitmonkey I would like to suggest to use Oracle VM VirtualBox
-you can donload it at ... https://www.virtualbox.org/wiki/Downloads after installing the last available version remember to install too "Oracle VM VirtualBox Extension Pack" https://download.virtualbox.org/virtualbox/6.0.10/Oracle_VM_VirtualBox_Extension_Pack-6.0.10.vbox-extpack .
+you can download it at ... https://www.virtualbox.org/wiki/Downloads after installing the last available version remember to install too "Oracle VM VirtualBox Extension Pack" https://download.virtualbox.org/virtualbox/6.0.10/Oracle_VM_VirtualBox_Extension_Pack-6.0.10.vbox-extpack .
 
 >>>> How to install Ubuntu on VirtualBox? https://askubuntu.com/questions/142549/how-to-install-ubuntu-on-virtualbox <<<< Guide Line ...
 
