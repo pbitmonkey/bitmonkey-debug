@@ -14,7 +14,7 @@ you can download it at ... https://www.virtualbox.org/wiki/Downloads after insta
 
 >>>> How to install Ubuntu on VirtualBox? https://askubuntu.com/questions/142549/how-to-install-ubuntu-on-virtualbox <<<< Guide Line ...
 
-Once VB is installed download the Ubuntu 19.04 (Disco Dingo) http://releases.ubuntu.com/19.04/ubuntu-19.04-desktop-amd64.iso 
+Once VB is installed download the Ubuntu 18.04.3 LTS (Bionic Beaver) http://releases.ubuntu.com/18.04/ubuntu-18.04.3-desktop-amd64.iso
 and install it in VB.
 
 Now I Will list the requirement you need to install to download and install Bitmonkey on Ubuntu 19.04 Disco Dingo starting from scratch up to the end.
