@@ -47,11 +47,11 @@ $ note : Ubuntu 12.04 and later have packages for libdb5.1-dev and libdb5.1++-de
 
 $ but using these will break binary wallet compatibility, and is not recommended, so do it ...
 
-$ ~/bitmonkey-debug/contrib$ sudo ./install_db4.sh pwd
+$ sudo add-apt-repository ppa:bitcoin/bitcoin
 
-$ change permission on install_db4.sh
+$ sudo apt-get update
 
-$ sudo ./install_db4.sh pwd
+$ sudo apt-get install libdb4.8-dev libdb4.8++-dev
 
 $ sudo apt-get install libminiupnpc-dev
 
@@ -85,7 +85,7 @@ $ Point bitmonkey-debug and open in terminal ... then type ...
 
 $ ./autogen.sh ... wait it finish ... then type ..
 
-$ ./configure BDB_LIBS="-L${BDB_PREFIX}/lib -ldb_cxx-4.8" BDB_CFLAGS="-I${BDB_PREFIX}/include" ... wait it finish ... then type ...
+$ ./configure CPPFLAGS="-I/usr/local/BerkeleyDB.4.8/include -O2" LDFLAGS="-L/usr/local/BerkeleyDB.4.8/lib" ... wait it finish ... then type ...
 
 $ make ... let it run it will take some time ...
 
