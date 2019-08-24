@@ -47,11 +47,11 @@ $ note : Ubuntu 12.04 and later have packages for libdb5.1-dev and libdb5.1++-de
 
 $ but using these will break binary wallet compatibility, and is not recommended, so do it ...
 
-$ sudo add-apt-repository ppa:bitcoin/bitcoin
+$ ~/bitmonkey-debug/contrib$ sudo ./install_db4.sh pwd
 
-$ sudo apt-get update
+$ change permission on install_db4.sh
 
-$ sudo apt-get install libdb4.8-dev libdb4.8++-dev
+$ sudo ./install_db4.sh pwd
 
 $ sudo apt-get install libminiupnpc-dev
 
