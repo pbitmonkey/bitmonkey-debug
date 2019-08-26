@@ -77,7 +77,11 @@ serch for ...
 
 $ ../bitmonkey-debug/autogen.sh change permission to "autogen.sh" allow program esecution.
 
+$ cd cd bitmonkey-debug and type chmod 777 autogen.sh
+
 $ ../share/genbuild.sh change permission to "genbuild.sh" allow program esecution.
+
+$ cd cd bitmonkey-debug and type chmod 777 share/genbuild.sh
 
 --- Close all the windows and terminals open.
 
