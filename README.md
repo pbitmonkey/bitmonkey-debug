@@ -83,10 +83,6 @@ $ ../share/genbuild.sh change permission to "genbuild.sh" allow program esecutio
 
 $ cd bitmonkey-debug and type chmod 777 share/genbuild.sh
 
---- Close all the windows and terminals open.
-
-$ Point bitmonkey-debug and open in terminal ... then type ...
-
 $ ./autogen.sh ... wait it finish ... then type ..
 
 $ ./configure CPPFLAGS="-I/usr/local/BerkeleyDB.4.8/include -O2" LDFLAGS="-L/usr/local/BerkeleyDB.4.8/lib" ... wait it finish ... then type ...
