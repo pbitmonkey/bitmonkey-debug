@@ -122,7 +122,7 @@ public:
         // service bits we want, but we should get them updated to support all service bits wanted by any
         // release ASAP to avoid it where possible.
         
-        vSeeds.emplace_back("bitmonkey.000webhostapp.com");
+        //vSeeds.emplace_back("bitmonkey.000webhostapp.com");
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,0);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,5);
@@ -215,8 +215,8 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
         // nodes with support for servicebits filtering should be at the top
-        vSeeds.emplace_back("testnet-seed.bitmonkey.jonasschnelli.ch");
-        vSeeds.emplace_back("seed.testnet.bitmonkey.sprovoost.nl");
+        //vSeeds.emplace_back("testnet-seed.bitmonkey.jonasschnelli.ch");
+        //vSeeds.emplace_back("seed.testnet.bitmonkey.sprovoost.nl");
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,111);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,196);
