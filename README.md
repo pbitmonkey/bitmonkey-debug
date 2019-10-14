@@ -43,10 +43,6 @@ $ sudo apt-get install openssl libssl-dev
 
 $ sudo apt-get install build-essential autotools-dev
 
-$ note : Ubuntu 12.04 and later have packages for libdb5.1-dev and libdb5.1++-dev
-
-$ but using these will break binary wallet compatibility, and is not recommended, so do it ...
-
 $ sudo add-apt-repository ppa:bitcoin/bitcoin
 
 $ sudo apt-get update
@@ -73,19 +69,13 @@ $ sudo apt-get install doxygen
 
 cd bitmonkey-debug
 
-serch for ... 
+$ type ... chmod 777 autogen.sh
 
-$ ../bitmonkey-debug/autogen.sh change permission to "autogen.sh" allow program esecution.
-
-$ cd bitmonkey-debug and type chmod 777 autogen.sh
-
-$ ../share/genbuild.sh change permission to "genbuild.sh" allow program esecution.
-
-$ cd bitmonkey-debug and type chmod 777 share/genbuild.sh
+$ type ... chmod 777 share/genbuild.sh
 
 $ ./autogen.sh ... wait it finish ... then type ..
 
-$ ./configure CPPFLAGS="-I/usr/local/BerkeleyDB.4.8/include -O2" LDFLAGS="-L/usr/local/BerkeleyDB.4.8/lib" ... wait it finish ... then type ...
+$ ./configure --with-incompatible-bdb ... wait it finish ... then type ...
 
 $ make ... let it run it will take some time ...
 
