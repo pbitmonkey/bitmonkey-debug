@@ -86,11 +86,17 @@ $ make install.
 $ When Bitmonkey will be installed the software create an hiden folder called .bitmonkey IMPORTANT ... CREATE INSIDE OF IT A TXT FILE CALLED bitmonkey.conf ... just copy and past the following inside :
 
 server=1
+
 txindex=1
+
 printtoconsole=1
+
 rpcuser=bitcoinrpc
-rpcpassword=x89ploom0mm
+
+rpcpassword=YOURPASSWORD
+
 rpcallowip=127.0.0.1
+
 addnode=80.211.43.88:7333
 
 ... To start Bitmonkey ... 
