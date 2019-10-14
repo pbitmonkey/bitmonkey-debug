@@ -100,6 +100,8 @@ cd src
 cd qt
 ./bitmonkey-qt ... and it will start for you ... I have to change some pic as soon i got time i do also it ... have fun Ciao Paolo.
 
+>>>>>> FAST START ~/bitmonkey-debug/src/qt/bitcoin-qt <<<<<<
+
 Bitmonkey is an experimental digital currency that enables instant payments to anyone, anywhere in the world. Bitmonkey uses peer-to-peer technology to operate with no central authority: managing transactions and issuing BITMONKEYS are carried out collectively by the network. Bitmonkey Core is the name of open source software which enables the use of this BITES.
 
 License
