@@ -83,6 +83,22 @@ $ when it finish optional ... type
 
 $ make install.
 
+$ When Bitmonkey will be installed the software create an hiden folder called .bitmonkey IMPORTANT ... CREATE INSIDE OF IT A TXT FILE CALLED bitmonkey.conf ... just copy and past the following inside :
+
+server=1
+txindex=1
+printtoconsole=1
+rpcuser=bitcoinrpc
+rpcpassword=x89ploom0mm
+rpcallowip=127.0.0.1
+addnode=80.211.43.88:7333
+
+... To start Bitmonkey ... 
+
+cd bitmonkey-debug
+cd src
+cd qt
+./bitmonkey-qt ... and it will start for you ... I have to change some pic as soon i got time i do also it ... have fun Ciao Paolo.
 
 Bitmonkey is an experimental digital currency that enables instant payments to anyone, anywhere in the world. Bitmonkey uses peer-to-peer technology to operate with no central authority: managing transactions and issuing BITMONKEYS are carried out collectively by the network. Bitmonkey Core is the name of open source software which enables the use of this BITES.
 
