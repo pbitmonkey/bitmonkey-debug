@@ -1,4 +1,4 @@
-# bitmonkey-debug
+# bitmonkey-debug OVA FILE FOR VIRTUAL BOX ...   www.bitmonkey.it/BITMONKEY/Tania.ova   THE DOWNLOAD IS ABOUT 4.5 GB ... It includes Ubuntu and Bitcoin just ready to run ... to Login please use the pass ...   t   ... yes just one letter ... letter t. 
 
 Bitmonkey Core integration/staging tree
 
